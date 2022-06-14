@@ -19,6 +19,7 @@ main
     cursor: pointer
     border-radius: 10px
     transition: .5s
+    transition-delay: .8s //Demora para ocultar los puntos
 
     display: flex
     justify-content: center
@@ -30,11 +31,8 @@ main
         background-color: #fff
         border-radius: 50%
         transform: translate(calc( 12px * var(--x)), calc( 12px * var(--y) ))
-
-
-
-
-
+        transition: transform .5s, width .5s, height .5s, background .5s
+        transition-delay: calc( .1s * var(--i)  ) //Hacemos que los puntos sean secuencialmente
 
 
 
@@ -43,3 +41,9 @@ main
 .activo
     width: 200px
     height: 200px
+    transition-delay: 0s //Demora 0 para que aparezcan grandes
+    span
+        width: 45px
+        height: 45px
+        background: #333849
+        transform: translate(calc( 60px * var(--x)), calc( 60px * var(--y) )) 
