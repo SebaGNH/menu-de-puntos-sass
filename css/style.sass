@@ -34,6 +34,13 @@ main
         transition: transform .5s, width .5s, height .5s, background .5s
         transition-delay: calc( .1s * var(--i)  ) //Hacemos que los puntos sean secuencialmente
 
+        display: flex  //Centramos los íconos
+        justify-content: center
+        align-items: center
+        ion-icon
+            transition: .5s
+            font-size: 0em
+
 
 
 
@@ -47,3 +54,8 @@ main
         height: 45px
         background: #333849
         transform: translate(calc( 60px * var(--x)), calc( 60px * var(--y) )) 
+        ion-icon
+            font-size: 1.35em  
+        &:hover
+            color: #2dfc52
+            filter: drop-shadow(0 0 2px #2dfc52), drop-shadow(0 0 5px #2dfc52), drop-shadow(0 0 15px #2dfc52) //Sombra al circulo
